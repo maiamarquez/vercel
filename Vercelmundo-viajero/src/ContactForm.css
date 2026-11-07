@@ -1,0 +1,180 @@
+/* --- Wrapper del formulario --- */
+.contact-form-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* --- Estado de confirmación --- */
+.confirmation-message {
+  background: var(--primary);
+  color: white;
+  padding: 40px 20px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.confirmation-message h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 32px;
+}
+
+.confirmation-message p {
+  margin-bottom: 30px;
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+.btn-continuar {
+  background: var(--secondary);
+  color: white;
+  border: none;
+  padding: 12px 32px;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn-continuar:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(232, 108, 15, 0.4);
+}
+
+/* --- Formulario --- */
+.contact-form {
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact-form h2 {
+  margin-top: 0;
+  margin-bottom: 24px;
+  color: var(--primary);
+  font-size: 32px;
+  text-align: center;
+}
+
+.contact-form p {
+  text-align: center;
+  color: #666;
+  margin-bottom: 32px;
+  font-size: 16px;
+}
+
+/* --- Grupos de formulario --- */
+.form-group {
+  margin-bottom: 24px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #2c3e50;
+  font-size: 15px;
+}
+
+/* --- Inputs y selects --- */
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #e5e4e7;
+  border-radius: 8px;
+  font-size: 15px;
+  color: #2c3e50;
+  background: #f8f9fa;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(170, 59, 255, 0.15);
+}
+
+/* Textarea --- */
+.form-group textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* --- Select --- */
+.form-group select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 2l6 6 6-6' stroke='%23555' stroke-width='2'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  cursor: pointer;
+}
+
+/* --- Mensajes de error --- */
+.error-message {
+  color: #e74c3c;
+  font-size: 12px;
+  margin-top: 4px;
+  display: block;
+}
+
+/* --- Botón de enviar --- */
+.btn-enviar {
+  width: 100%;
+  padding: 12px;
+  background: var(--secondary);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 24px;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.btn-enviar:hover {
+  background: #d45a0c;
+  transform: translateY(-2px);
+}
+
+/* --- Responsive --- */
+@media (max-width: 480px) {
+  .contact-form {
+    margin: 20px;
+    padding: 30px 20px;
+  }
+  
+  .contact-form-wrapper {
+    padding: 20px 10px;
+  }
+  
+  .confirmation-message {
+    padding: 30px 15px;
+  }
+  
+  .confirmation-message h2 {
+    font-size: 24px;
+  }
+  
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+  
+  .btn-enviar,
+  .btn-continuar {
+    padding: 10px;
+    font-size: 14px;
+  }
+}

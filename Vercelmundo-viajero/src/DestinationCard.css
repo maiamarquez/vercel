@@ -1,0 +1,201 @@
+/* --- Tarjeta de Destino --- */
+.destination-card {
+  width: 100%;
+  max-width: 350px;
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.destination-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+/* Imagen de la tarjeta */
+.card-image {
+  width: 100%;
+  height: 250px;
+  position: relative;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.destination-card:hover .card-image img {
+  transform: scale(1.05);
+}
+
+/* Superposición de país */
+.card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(44, 62, 80, 0.8);
+  color: white;
+  padding: 8px 12px;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.country {
+  font-weight: bold;
+}
+
+/* Contenido de la tarjeta --- */
+.card-content {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-title {
+  font-size: 20px;
+  margin-bottom: 8px;
+  color: #2c3e50;
+}
+
+.card-description {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 12px;
+  flex-grow: 1;
+}
+
+.card-price {
+  font-weight: bold;
+  color: #e86c0f;
+  margin-bottom: 16px;
+  font-size: 16px;
+}
+
+/* Botón Ver Más --- */
+.btn-ver-mas {
+  width: 100%;
+  padding: 10px;
+  background: #e86c0f;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top: 8px;
+}
+
+.btn-ver-mas:hover {
+  background: #d45a0c;
+}
+
+/* Modal --- */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.modal-overlay.hidden {
+  display: none;
+}
+
+.modal-content {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  max-width: 600px;
+  width: 100%;
+  position: relative;
+  animation: modalIn 0.3s ease-out;
+}
+
+@keyframes modalIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.modal-content h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #2c3e50;
+  font-size: 28px;
+}
+
+.modal-content img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.modal-content p {
+  margin: 12px 0;
+  font-size: 15px;
+  color: #555;
+}
+
+.modal-content p strong {
+  color: #2c3e50;
+  display: block;
+  margin-top: 10px;
+}
+
+.btn-cerrar-modal {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #666;
+}
+
+.btn-cerrar-modal:hover {
+  color: #2c3e50;
+}
+
+/* Responsive --- */
+@media (max-width: 480px) {
+  .destination-card {
+    max-width: 100%;
+    margin: 10px 0;
+  }
+  
+  .card-image {
+    height: 180px;
+  }
+  
+  .modal-content {
+    margin: 20px;
+    padding: 30px;
+  }
+  
+  .modal-content img {
+    height: 200px;
+  }
+}
